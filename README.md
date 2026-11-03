@@ -1,2 +1,7 @@
-# BreastSCAN-Net
-An explainable hybrid deep learning framework for breast cancer classification using MRI images, integrating TAG-GAN-based data augmentation, ResNet50, S-Transformer, SE-based feature refinement, Grey Wolf Optimization (GWO), and Grad-CAM for benign and malignant classification.
+# BreastSCAN-Net: An Explainable Hybrid Deep Learning Framework for Breast Cancer Classification Using MRI Images
+
+BreastSCAN-Net is an explainable hybrid deep learning framework developed for automated breast cancer classification using Magnetic Resonance Imaging (MRI). The proposed framework integrates ResNet50 for spatial feature extraction and an S-Transformer for contextual feature learning, followed by Squeeze-and-Excitation (SE) attention for adaptive feature refinement. TAG-GAN-based synthetic image generation is incorporated to enhance training data diversity, while Grey Wolf Optimization (GWO) is employed for hyperparameter optimization. Finally, a binary classification module identifies breast MRI images as benign or malignant, and Grad-CAM provides visual explanations by highlighting image regions that contribute to the model's predictions.
+
+The framework includes MRI preprocessing operations such as N4 bias field correction, region of interest (ROI) extraction, Non-Local Means (NLM) denoising, percentile normalization, CLAHE enhancement, and image resizing. The input images are standardized to 224 × 224 × 3 for model processing. The implementation is organized into separate Python modules for model development, preprocessing and augmentation, and TAG-GAN-based synthetic image generation.
+
+This repository provides the implementation components of BreastSCAN-Net to support research and reproducibility in MRI-based breast cancer classification. Synthetic image generation should be restricted to training data, and patient-level data separation should be considered whenever patient identifiers are available.
